@@ -7,6 +7,7 @@ import {
   ActivityIndicator,
   Alert,
   TouchableOpacity,
+  SafeAreaView,
 } from 'react-native';
 import { bankService } from '../services/bankService';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -60,12 +61,12 @@ export const AccountsScreen = () => {
 
   if (error) {
     return (
-      <View style={styles.centered}>
+      <SafeAreaView style={styles.centered}>
         <Text style={styles.errorText}>{error}</Text>
         <TouchableOpacity style={styles.retryButton} onPress={loadAccounts}>
           <Text style={styles.retryButtonText}>Повторить</Text>
         </TouchableOpacity>
-      </View>
+      </SafeAreaView>
     );
   }
 
@@ -83,7 +84,7 @@ export const AccountsScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
         <View style={styles.header}>
           <Text style={styles.title}>Счета</Text>
@@ -126,7 +127,7 @@ export const AccountsScreen = () => {
           )}
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -134,6 +135,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f5f5f5',
+   
   },
   scrollView: {
     flex: 1,

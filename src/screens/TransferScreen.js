@@ -94,10 +94,10 @@ export const TransferScreen = ({ navigation }) => {
               onPress={() => setSelectedCard(card)}
             >
               <Text style={styles.cardNumber}>
-                {`**** **** **** ${card.cardNumber.slice(-4)}`}
+                {`**** **** **** ${card.cardNumber}`}
               </Text>
               <Text style={styles.cardBalance}>
-                {card.balance} {card.currency.curAbbreviation}
+                {card.balance} {card.currency}
               </Text>
             </TouchableOpacity>
           ))}

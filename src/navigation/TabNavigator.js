@@ -1,8 +1,8 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MainScreen } from '../screens/MainScreen';
-import { AccountsScreen } from '../screens/AccountsScreen';
-import { CurrencyCalculatorScreen } from '../screens/CurrencyCalculatorScreen';
+import { UserManagementScreen } from '../screens/UserManagementScreen';
+import { UserListScreen } from '../screens/UserListScreen';
 import { Ionicons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
@@ -16,12 +16,11 @@ export const TabNavigator = () => {
 
           if (route.name === 'Главная') {
             iconName = focused ? 'home' : 'home-outline';
-          } else if (route.name === 'Счета') {
-            iconName = focused ? 'wallet' : 'wallet-outline';
-          } else if (route.name === 'Калькулятор') {
-            iconName = focused ? 'calculator' : 'calculator-outline';
+          } else if (route.name === 'Создание пользователя') {
+            iconName = focused ? 'person-add' : 'person-add-outline';
+          } else if (route.name === 'Список пользователей') {
+            iconName = focused ? 'people' : 'people-outline';
           }
-          // Добавьте иконки для других вкладок, если необходимо
 
           return <Ionicons name={iconName} size={size} color={color} />;
         },
@@ -31,9 +30,8 @@ export const TabNavigator = () => {
       })}
     >
       <Tab.Screen name="Главная" component={MainScreen} />
-      <Tab.Screen name="Счета" component={AccountsScreen} />
-      <Tab.Screen name="Калькулятор" component={CurrencyCalculatorScreen} />
-      {/* TODO: Добавить другие вкладки, например, Платежи, Журнал, Еще */}
+      <Tab.Screen name="Создание пользователя" component={UserManagementScreen} />
+      <Tab.Screen name="Список пользователей" component={UserListScreen} />
     </Tab.Navigator>
   );
 }; 

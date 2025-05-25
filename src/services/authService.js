@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-// const KEYCLOAK_URL = 'http://192.168.1.8:9080';
-const KEYCLOAK_URL = 'http://172.20.10.2:9080';
+const KEYCLOAK_URL = 'http://192.168.1.8:9080';
+// const KEYCLOAK_URL = 'http://172.20.10.2:9080';
 const REALM = 'master';
 const CLIENT_ID = 'bank-app';
 
