@@ -1,7 +1,7 @@
 import { authService } from './authService';
 
-const API_URL = 'http://192.168.1.8:8080/rest/admin-ui'; // Используем базовый URL бэкенда
-// const API_URL = 'http://172.20.10.2:8080/rest/admin-ui';
+// const API_URL = 'http://192.168.1.8:8080/rest/admin-ui'; // Используем базовый URL бэкенда
+const API_URL = 'http://172.20.10.2:8080/rest/admin-ui';
 export const currencyService = {
   async getCurrencyRates() {
     try {

@@ -1,6 +1,6 @@
 // Базовый URL для API
-export const API_URL = 'http://192.168.1.8:8080/rest/admin-ui';
-// export const API_URL = 'http://172.20.10.2:8080/rest/admin-ui';
+// export const API_URL = 'http://192.168.1.8:8080/rest/admin-ui';
+export const API_URL = 'http://172.20.10.2:8080/rest/admin-ui';
 
 
 // Настройки для карты

@@ -1,7 +1,7 @@
 import { authService } from './authService';
 
-const API_URL = 'http://192.168.1.8:8080/rest/admin-ui';
-// const API_URL = 'http://172.20.10.2:8080/rest/admin-ui';
+// const API_URL = 'http://192.168.1.8:8080/rest/admin-ui';
+const API_URL = 'http://172.20.10.2:8080/rest/admin-ui';
 const getHeaders = async () => {
   const token = await authService.getAccessToken();
   const headers = {
